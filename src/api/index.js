@@ -3,6 +3,6 @@ import attraction from './attraction';
 
 const router = Router();
 
-router.use('/attraction', attraction);
+router.use('/attractions', attraction);
 
 export default router;
