@@ -5,7 +5,6 @@ import mongoose from 'mongoose';
 
 const fromFileToMongoDB = fixture => Promise.map(fixture.data, (document) => {
   const Model = mongoose.connection.model(fixture.model);
-  console.log(document);
   const doc = new Model(document);
   return doc.save(document);
 });
