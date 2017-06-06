@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "start:dev": "NODE_ENV=development nodemon --exec babel-node src/index.js",
-    "load-db": "babel-node test/loadDb.js"
+    "load-db": "babel-node test/loadDb.js",
+    "lint": "eslint --ignore-path .gitignore ."
   },
   "repository": {
     "type": "git",
