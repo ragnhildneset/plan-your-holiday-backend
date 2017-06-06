@@ -9,7 +9,7 @@ npm install
 
 ## Development
 
-Load development data into database
+Mongdb must be running. Load development data into database
 ```
 npm run load-db
 ```
@@ -23,7 +23,7 @@ Nodemon will watch for any file changes and restart the server if there is any c
 
 ## Lint
 
-ESLint is used to maintain high code quality and a unified code style. To run the linter, use:
+ESLint is used to maintain high code quality and a unified code style. Run it before you commit your code to check that it has the right coding style. To run the linter, use:
 ```
 npm run lint
 ```
