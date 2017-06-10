@@ -2,6 +2,7 @@
  * Created by duyguakdemir on 10.06.17.
  */
 import mongoose from 'mongoose';
+import bcrypt from 'bcrypt-nodejs';
 
 // eslint-disable-next-line indent
 const UserSchema = new mongoose.Schema({
@@ -20,7 +21,7 @@ const UserSchema = new mongoose.Schema({
   birthday: {
     type: Number
   }
-
+  // attraction:
 });
 UserSchema.pre('save', function (next) {
   const user = this;
