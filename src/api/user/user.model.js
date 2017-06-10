@@ -13,7 +13,14 @@ const UserSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true
+  },
+  email: {
+    type: String
+  },
+  birthday: {
+    type: Number
   }
+
 });
 UserSchema.pre('save', function (next) {
   const user = this;
