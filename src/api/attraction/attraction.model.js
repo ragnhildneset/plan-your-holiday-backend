@@ -6,10 +6,27 @@ const AttractionSchema = new mongoose.Schema({
     require: true
   },
   city: {
-    type: String
+    type: mongoose.Schema.Types.ObjectId
   },
   address: {
     type: String
+  },
+  duration: {
+    type: Number
+  },
+  coordinates: {
+    longitude: Number,
+    latitude: Number
+  },
+  rating: {
+    quality: {
+      rating: Number,
+      amount: Number
+    },
+    popularity: {
+      rating: Number,
+      amount: Number
+    }
   }
 });
 
