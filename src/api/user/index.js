@@ -1,8 +1,13 @@
 import { Router } from 'express';
-import * as controller from './user.controller';
+import * as userController from './user.controller';
 
-const router = Router();
+/* eslint-disable no-unused-vars */
+function userRoutes(passport) {
+  const router = Router();
 
-router.get('/', controller.list);
+  router.post('/login', userController.login);
+  router.post('/signup', userController.signup);
+  router.post('/unregister', passport.authenticate('jwt', { session: false }), userController.unregister);
 
-export default router;
+  return router;
+}
