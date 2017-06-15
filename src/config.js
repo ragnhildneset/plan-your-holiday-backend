@@ -5,3 +5,11 @@ export default {
   secret: process.env.SECRET || 'such-secret',
   jwtExpiresIn: process.env.JWT_EXPIRE || '7 days'
 };
+/*
+var Config = {};
+Config.db.host = 'localhost:27017';
+Config.db.name = 'planholiday';
+Config.auth.jwtSecret = "very secret secret";
+
+module.exports = Config;
+*/

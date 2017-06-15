@@ -1,13 +1,21 @@
-import { Router } from 'express';
-import * as userController from './user.controller';
+module.exports = userRoutes;
 
-/* eslint-disable no-unused-vars */
-function userRoutes(passport) {
-  const router = Router();
+function userRoutes(passport) 
+{
+     
+    var userController = require('./user.controller');
+    var router = require('express').Router();
 
-  router.post('/login', userController.login);
-  router.post('/signup', userController.signup);
-  router.post('/unregister', passport.authenticate('jwt', { session: false }), userController.unregister);
+    //http://localhost:9000/api/user/login
+    router.get('/login',function(req,res)
+    {
+        res.send("Here at loging get");
+    });
+    router.post('/login', function(req, res){userController.login});
+   
+    router.post('/signup', userController.singup);
+    //router.post('/unregister', passport.authenticate('jwt', {session: false}),userController.unregister)
 
-  return router;
-}
+    return router;
+
+}  

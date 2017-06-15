@@ -14,10 +14,20 @@ mongoose.connect(config.mongoUrl);
 // Setup server
 const app = express();
 
+var bodyParser = require('body-parser');
+//Tracks server GET operations
+var morgan = require ('morgan');
+
+//Use Morgan Middleware
+app.use(morgan('dev'));
 app.use(cors());
 app.use(json());
 app.use(urlencoded({ extended: true }));
 app.use(passport.initialize());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
 app.use('/api', api);
 

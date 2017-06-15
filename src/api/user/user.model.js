@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcrypt-nodejs';
 
-const UserSchema = new mongoose.Schema({
+var userSchema = new mongoose.Schema({
   username: {
     type: String,
     require: true,
@@ -21,31 +21,36 @@ const UserSchema = new mongoose.Schema({
     type: String
   }
 });
-  /* eslint-disable func-names */
-UserSchema.pre('save', function (next) {
-  const user = this;
-  if (!user.isModified('password')) return next();
 
-  /* eslint-disable func-names */
-  /* eslint-disable prefer-arrow-callback */
-  /* eslint-disable no-shadow */
+/* SB: I think this function reacts to the SAVE event, and encrypts the password*/
+userSchema.pre('save', function(next) {
+    var user = this;
 
-  bcrypt.genSalt(10, function (err, salt) {
-    if (err) return next(err);
+    // only hash the password if it has been modified (or is new)
+    if (!user.isModified('password')) return next();
 
-    bcrypt.hash(user.password, salt, null, function (err, hash) {
-      if (err) return next(err);
-      user.password = hash;
-      next();
+    bcrypt.genSalt(10, function(err, salt) {
+        if (err) return next(err);
+
+        // hash the password using our new salt
+        bcrypt.hash(user.password, salt, null, function (err, hash) {
+            if (err) return next(err);
+
+            // override the cleartext password with the hashed one
+            user.password = hash;
+            next();
+        });
     });
-  });
 });
 
-UserSchema.methods.comparePassword = function (candidatePassword, cb) {
-  bcrypt.compare(candidatePassword, this.password, function (err, isMatch) {
-    if (err) return cb(err);
-    cb(null, isMatch);
-  });
+userSchema.methods.comparePassword = function(candidatePassword, cb) {
+    bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
+        if (err) return cb(err);
+        cb(null, isMatch);
+    });
 };
 
-export default mongoose.model('User', UserSchema);
+
+var User = mongoose.model('User', userSchema);
+
+module.exports = User;
