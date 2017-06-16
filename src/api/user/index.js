@@ -7,12 +7,13 @@ function userRoutes(passport)
     var router = require('express').Router();
 
     //http://localhost:9000/api/user/login
-    router.get('/login',function(req,res)
+   /* router.post('/login',function(req,res)
     {
         res.send("Here at loging get");
-    });
-    router.post('/login', function(req, res){userController.login});
+    });*/
+    router.post('/login', userController.login);
    
+   //http://localhost:9000/api/user/singup
     router.post('/signup', userController.singup);
     //router.post('/unregister', passport.authenticate('jwt', {session: false}),userController.unregister)
 

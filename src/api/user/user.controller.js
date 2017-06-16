@@ -7,12 +7,12 @@ module.exports.login = function (req,res)
 {
     if(!req.body.username)
     {
-        res.status(400).send('username required');
+        res.status(400).send('User name required');
         return;
     }
     if(!req.body.password)
     {
-        res.status(400).send('password required');
+        res.status(400).send('Password required');
         return;
     }
 
@@ -37,7 +37,8 @@ module.exports.login = function (req,res)
                 res.status(401).send('Invalid Credentials');
             } else 
             {
-                res.status(200).json({token: createToken(user)});
+                //res.status(200).json({token: createToken(user)});
+                res.send("User found");
             }
 
         });
@@ -50,7 +51,6 @@ module.exports.login = function (req,res)
 module.exports.singup = function (req,res)
 {
     
-    console.log("Getting in the methode for Signup");
     if(!req.body.username)
     {
         res.status(400).send('username required');
