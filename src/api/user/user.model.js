@@ -7,6 +7,11 @@ var userSchema = new mongoose.Schema({
     require: true,
     unique: true
   },
+  loginid: {
+    type: String,
+    require: true,
+    unique: true
+  },
   password: {
     type: String,
     required: true
@@ -16,6 +21,9 @@ var userSchema = new mongoose.Schema({
   },
   birthday: {
     type: Date
+  },
+  density: {
+    type: Number
   },
   attraction: {
     type: String

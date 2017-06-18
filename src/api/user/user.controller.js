@@ -16,7 +16,7 @@ module.exports.login = function (req,res)
         return;
     }
 
-   User.findOne({username: req.body.username},function(err, user)
+   User.findOne({loginid: req.body.username},function(err, user)
    {
        if (err) 
        {
@@ -64,9 +64,11 @@ module.exports.singup = function (req,res)
     
     var user = new User();
     user.username = req.body.username;
+    user.loginid = req.body.loginid;
     user.password = req.body.password;
     user.email = req.body.email;
     user.birthday = req.body.birthday;
+    user.density = req.body.density;
 
     user.save(function(err)
      {
