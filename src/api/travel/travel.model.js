@@ -7,6 +7,9 @@ var travelSchema = new mongoose.Schema({
   date: {
     type: Date
   },
+  duration: {
+    type: Number
+  }
   time: {
     hours: {
       type: Number
