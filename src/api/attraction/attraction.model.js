@@ -14,9 +14,12 @@ const AttractionSchema = new mongoose.Schema({
   duration: {
     type: Number
   },
+  category: {
+    type: String
+  },
   coordinates: {
-    longitude: Number,
-    latitude: Number
+    latitude: Number,
+    longitude: Number
   },
   rating: {
     quality: {

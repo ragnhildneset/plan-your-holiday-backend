@@ -5,13 +5,14 @@ export default {
   data: [
     {
       _id: Types.ObjectId('56aa0db353c8040f4cc54637'),
-      title: 'Eisbach Surfers',
+      title: 'Königsplatz',
       city: Types.ObjectId('56aa0db353c8040f4cc54647'),
-      address: 'Mockstrasse 5',
-      duration: 120,
+      address: 'Königsplatz',
+      duration: 30,
+      category: 'Monuments',
       coordinates: {
-        longitude: 10000,
-        latitude: 20000
+        latitude: 48.1458473,
+        longitude: 11.5651
       },
       rating: {
         quality: {
@@ -25,25 +26,425 @@ export default {
       }
     },
     {
-      _id: Types.ObjectId('56aa0db353c8040f4cc54537'),
-      title: 'Marienplatz',
-      city: Types.ObjectId('56aa0db353c8040f4cc55647'),
-      address: 'Mockstrasse 7',
+      _id: Types.ObjectId('56aa0db353c8040f4cc54637'),
+      title: 'Siegestor',
+      city: Types.ObjectId('56aa0db353c8040f4cc54647'),
+      address: 'Leopoldstraße',
       duration: 20,
+      category: 'Monuments',
       coordinates: {
-        longitude: 10000,
-        latitude: 20000
+        latitude: 48.1523619,
+        longitude: 11.5822734
+      },
+      rating: {
+        quality: {
+          rating: 3.5,
+          amount: 2000
+        },
+        popularity: {
+          rating: 4.1,
+          amount: 2000
+        }
+      }
+    },
+    {
+      _id: Types.ObjectId('56aa0db353c8040f4cc54637'),
+      title: 'Feldherrenhalle',
+      city: Types.ObjectId('56aa0db353c8040f4cc54647'),
+      address: 'Residenzstraße',
+      duration: 30,
+      category: 'Monuments',
+      coordinates: {
+        latitude: 48.1417443,
+        longitude: 11.5773413
+      },
+      rating: {
+        quality: {
+          rating: 4.5,
+          amount: 4500
+        },
+        popularity: {
+          rating: 4.4,
+          amount: 4500
+        }
+      }
+    },
+    {
+      _id: Types.ObjectId('56aa0db353c8040f4cc54637'),
+      title: 'Mariensäule',
+      city: Types.ObjectId('56aa0db353c8040f4cc54647'),
+      address: 'Marienplatz',
+      duration: 30,
+      category: 'Monuments',
+      coordinates: {
+        latitude: 48.13723,
+        longitude: 11.575513
       },
       rating: {
         quality: {
           rating: 4.2,
-          amount: 3000
+          amount: 6000
         },
         popularity: {
           rating: 4.8,
-          amount: 3000
+          amount: 6000
         }
       }
-    }
+    },
+    {
+      _id: Types.ObjectId('56aa0db353c8040f4cc54637'),
+      title: 'Obelisk',
+      city: Types.ObjectId('56aa0db353c8040f4cc54647'),
+      address: 'Karolinenplatz',
+      duration: 20,
+      category: 'Monuments',
+      coordinates: {
+        latitude: 48.1446611,
+        longitude: 11.5692434
+      },
+      rating: {
+        quality: {
+          rating: 3.4,
+          amount: 600
+        },
+        popularity: {
+          rating: 3.1,
+          amount: 600
+        }
+      }
+    },
+
+    {
+      _id: Types.ObjectId('56aa0db353c8040f4cc54637'),
+      title: 'Alte Pinakothek',
+      city: Types.ObjectId('56aa0db353c8040f4cc54647'),
+      address: 'Barer Straße',
+      duration: 180,
+      category: 'Museums',
+      coordinates: {
+        latitude: 48.1482913,
+        longitude: 11.5699847
+      },
+      rating: {
+        quality: {
+          rating: 3.9,
+          amount: 1000
+        },
+        popularity: {
+          rating: 3.1,
+          amount: 1000
+        }
+      }
+    },
+    {
+      _id: Types.ObjectId('56aa0db353c8040f4cc54637'),
+      title: 'Neue Pinakothek',
+      city: Types.ObjectId('56aa0db353c8040f4cc54647'),
+      address: 'Barer Straße',
+      category: 'Museums',
+      duration: 120,
+      coordinates: {
+        latitude: 48.1498869,
+        longitude: 11.5711139
+      },
+      rating: {
+        quality: {
+          rating: 3.7,
+          amount: 1000
+        },
+        popularity: {
+          rating: 3.6,
+          amount: 1000
+        }
+      }
+    },
+    {
+      _id: Types.ObjectId('56aa0db353c8040f4cc54637'),
+      title: 'Pinakothek der Moderne',
+      city: Types.ObjectId('56aa0db353c8040f4cc54647'),
+      address: 'Barer Straße',
+      category: 'Museums',
+      duration: 120,
+      coordinates: {
+        latitude: 48.1471559,
+        longitude: 11.5723021
+      },
+      rating: {
+        quality: {
+          rating: 3.5,
+          amount: 1500
+        },
+        popularity: {
+          rating: 3.1,
+          amount: 1500
+        }
+      }
+    },
+    {
+      _id: Types.ObjectId('56aa0db353c8040f4cc54637'),
+      title: 'Sammlung Brandhorst',
+      city: Types.ObjectId('56aa0db353c8040f4cc54647'),
+      address: 'Theresienstraße',
+      category: 'Museums',
+      duration: 100,
+      coordinates: {
+        latitude: 48.1481359,
+        longitude: 11.5742667
+      },
+      rating: {
+        quality: {
+          rating: 4.2,
+          amount: 700
+        },
+        popularity: {
+          rating: 2.3,
+          amount: 700
+        }
+      }
+    },
+    {
+      _id: Types.ObjectId('56aa0db353c8040f4cc54637'),
+      title: 'Lenbachhaus',
+      city: Types.ObjectId('56aa0db353c8040f4cc54647'),
+      address: 'Luisenstraße',
+      category: 'Museums',
+      duration: 120,
+      coordinates: {
+        latitude: 48.1467073,
+        longitude: 11.5640009
+      },
+      rating: {
+        quality: {
+          rating: 4.1,
+          amount: 900
+        },
+        popularity: {
+          rating: 3.7,
+          amount: 900
+        }
+      }
+    },
+
+    {
+      _id: Types.ObjectId('56aa0db353c8040f4cc54637'),
+      title: 'Old botanic Garden',
+      city: Types.ObjectId('56aa0db353c8040f4cc54647'),
+      address: 'Sophienstraße',
+      category: 'Parks',
+      duration: 30,
+      coordinates: {
+        latitude: 48.1419801,
+        longitude: 11.564044
+      },
+      rating: {
+        quality: {
+          rating: 3.3,
+          amount: 1000
+        },
+        popularity: {
+          rating: 1.9,
+          amount: 1000
+        }
+      }
+    },
+    {
+      _id: Types.ObjectId('56aa0db353c8040f4cc54637'),
+      title: 'Botanic Garden',
+      city: Types.ObjectId('56aa0db353c8040f4cc54647'),
+      address: 'Menzinger Straße 65',
+      category: 'Parks',
+      duration: 180,
+      coordinates: {
+        latitude: 48.1644668,
+        longitude: 11.5029272
+      },
+      rating: {
+        quality: {
+          rating: 4.3,
+          amount: 1000
+        },
+        popularity: {
+          rating: 1.8,
+          amount: 1000
+        }
+      }
+    },
+    {
+      _id: Types.ObjectId('56aa0db353c8040f4cc54637'),
+      title: 'English Garden',
+      city: Types.ObjectId('56aa0db353c8040f4cc54647'),
+      address: '',
+      duration: 120,
+      category: 'Parks',
+      coordinates: {
+        latitude: 48.1642323,
+        longitude: 11.6055522
+      },
+      rating: {
+        quality: {
+          rating: 4.6,
+          amount: 5000
+        },
+        popularity: {
+          rating: 4.7,
+          amount: 5000
+        }
+      }
+    },
+    {
+      _id: Types.ObjectId('56aa0db353c8040f4cc54637'),
+      title: 'Olympiapark',
+      city: Types.ObjectId('56aa0db353c8040f4cc54647'),
+      address: 'Spiridon-Louis-Ring',
+      duration: 120,
+      category: 'Parks',
+      coordinates: {
+        latitude: 48.1754646,
+        longitude: 11.551797
+      },
+      rating: {
+        quality: {
+          rating: 4.1,
+          amount: 6000
+        },
+        popularity: {
+          rating: 4.7,
+          amount: 6000
+        }
+      }
+    },
+    {
+      _id: Types.ObjectId('56aa0db353c8040f4cc54637'),
+      title: 'Hofgarten',
+      city: Types.ObjectId('56aa0db353c8040f4cc54647'),
+      address: 'Hofgartenstraße',
+      duration: 30,
+      category: 'Parks',
+      coordinates: {
+        latitude: 48.1427778,
+        longitude: 11.58
+      },
+      rating: {
+        quality: {
+          rating: 4.0,
+          amount: 2000
+        },
+        popularity: {
+          rating: 2.1,
+          amount: 2000
+        }
+      }
+    },
+
+    {
+      _id: Types.ObjectId('56aa0db353c8040f4cc54637'),
+      title: 'Theatinerkirche',
+      city: Types.ObjectId('56aa0db353c8040f4cc54647'),
+      address: 'Salvatorplatz',
+      duration: 30,
+      category: 'Churches',
+      coordinates: {
+        latitude: 48.1420413,
+        longitude: 11.5766345
+      },
+      rating: {
+        quality: {
+          rating: 3.6,
+          amount: 1000
+        },
+        popularity: {
+          rating: 2.4,
+          amount: 1000
+        }
+      }
+    },
+    {
+      _id: Types.ObjectId('56aa0db353c8040f4cc54637'),
+      title: 'Saint Peters Church',
+      city: Types.ObjectId('56aa0db353c8040f4cc54647'),
+      address: 'Rindermarkt',
+      duration: 60,
+      category: 'Churches',
+      coordinates: {
+        latitude: 48.136491,
+        longitude: 11.5760468
+      },
+      rating: {
+        quality: {
+          rating: 3.8,
+          amount: 1000
+        },
+        popularity: {
+          rating: 1.8,
+          amount: 1000
+        }
+      }
+    },
+    {
+      _id: Types.ObjectId('56aa0db353c8040f4cc54637'),
+      title: 'Saint Michaels Church',
+      city: Types.ObjectId('56aa0db353c8040f4cc54647'),
+      address: 'Neuhauser Straße',
+      duration: 30,
+      category: 'Churches',
+      coordinates: {
+        latitude: 48.1388989,
+        longitude: 11.5704987
+      },
+      rating: {
+        quality: {
+          rating: 3.6,
+          amount: 1000
+        },
+        popularity: {
+          rating: 1.9,
+          amount: 1000
+        }
+      }
+    },
+    {
+      _id: Types.ObjectId('56aa0db353c8040f4cc54637'),
+      title: 'Frauenkirche',
+      city: Types.ObjectId('56aa0db353c8040f4cc54647'),
+      address: 'Frauenplatz',
+      duration: 30,
+      category: 'Churches',
+      coordinates: {
+        latitude: 48.138631,
+        longitude: 11.5736254
+      },
+      rating: {
+        quality: {
+          rating: 4.2,
+          amount: 2000
+        },
+        popularity: {
+          rating: 4.3,
+          amount: 2000
+        }
+      }
+    },
+    {
+      _id: Types.ObjectId('56aa0db353c8040f4cc54637'),
+      title: 'Saint Ludwigs Church',
+      city: Types.ObjectId('56aa0db353c8040f4cc54647'),
+      address: 'Ludwigstraße',
+      duration: 30,
+      category: 'Churches',
+      coordinates: {
+        latitude: 48.148872,
+        longitude: 11.5812088
+      },
+      rating: {
+        quality: {
+          rating: 3.4,
+          amount: 1000
+        },
+        popularity: {
+          rating: 2.7,
+          amount: 1000
+        }
+      }
+    },
   ]
 };
