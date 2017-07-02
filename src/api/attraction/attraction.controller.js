@@ -1,5 +1,7 @@
+import { Types } from 'mongoose';
 import Attraction from './attraction.model';
 
+// return all attractions
 export function list(req, res, next) {
   Attraction.find()
     .then((attractions) => {
@@ -7,6 +9,24 @@ export function list(req, res, next) {
     })
     .catch(next);
 }
+
+// return the list of currently used categories
+export function categories(req, res, next) {
+   Attraction.find().distinct('category').exec( function (err, docs) {
+    if (err)
+        res.send(err);
+    res.json(docs);
+  });
+}
+
+/* TODO create a function which returns all attractions of a category
+export function category(req, res, next) {
+   Attraction.findById(req.params.category, function(err, Attraction) {
+      if (err)
+          res.send(err);
+      res.json(Attraction);
+    });
+}*/
 
 exports.get = function(req, res){
   Attraction.find().exec(function(err, attraction){
