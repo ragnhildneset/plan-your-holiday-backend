@@ -7,3 +7,9 @@ export function list(req, res, next) {
     })
     .catch(next);
 }
+
+exports.get = function(req, res){
+  Attraction.find().exec(function(err, attraction){
+    res.jsonp(attraction);
+  });
+};
