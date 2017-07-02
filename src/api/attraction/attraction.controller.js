@@ -19,9 +19,18 @@ export function categories(req, res, next) {
   });
 }
 
-// TODO create a function which returns all attractions of a category
+// return the list of attractions of a given category
 export function category(req, res, next) {
   Attraction.find({category: req.params.category}).exec( function (err, docs) {
+   if (err)
+       res.send(err);
+   res.json(docs);
+   });
+}
+
+// return a list containing "limit"-number of attractions of a given category in descending order
+export function top(req, res, next) {
+  Attraction.find({category: req.params.category}).sort({'rating.quality.rating': -1}).limit(parseInt(req.params.limit)).exec( function (err, docs) {
    if (err)
        res.send(err);
    res.json(docs);
