@@ -21,7 +21,7 @@ export function categories(req, res, next) {
 
 // TODO create a function which returns all attractions of a category
 export function category(req, res, next) {
-  Attraction.find({category: req.param("category")}).exec( function (err, docs) {
+  Attraction.find({category: req.params.category}).exec( function (err, docs) {
    if (err)
        res.send(err);
    res.json(docs);
