@@ -5,6 +5,6 @@ const router = Router();
 
 router.get('/', controller.list);
 router.get('/categories', controller.categories);
-//router.get('/category/:category', controller.category);
+router.get('/category/:category', controller.category);
 
 export default router;

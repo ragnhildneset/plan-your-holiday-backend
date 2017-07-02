@@ -19,14 +19,14 @@ export function categories(req, res, next) {
   });
 }
 
-/* TODO create a function which returns all attractions of a category
+// TODO create a function which returns all attractions of a category
 export function category(req, res, next) {
-   Attraction.findById(req.params.category, function(err, Attraction) {
-      if (err)
-          res.send(err);
-      res.json(Attraction);
-    });
-}*/
+  Attraction.find({category: req.param("category")}).exec( function (err, docs) {
+   if (err)
+       res.send(err);
+   res.json(docs);
+   });
+}
 
 exports.get = function(req, res){
   Attraction.find().exec(function(err, attraction){
