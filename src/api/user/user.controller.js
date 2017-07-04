@@ -70,6 +70,7 @@ module.exports.singup = function (req,res)
     user.birthday = req.body.birthday;
     user.density = req.body.density;
 
+
     user.save(function(err)
      {
         if (err) 

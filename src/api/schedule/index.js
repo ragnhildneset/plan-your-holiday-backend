@@ -1,8 +1,19 @@
-import { Router } from 'express';
-import * as controller from './schedule.controller';
+module.exports = scheduleRoutes;
 
-const router = Router();
 
-router.get('/', schedule.list);
+function scheduleRoutes() {
 
-export default router;
+    var scheduleController = require('./schedule.controller');
+    var router = require('express').Router();
+   
+   //SB: Creating a travel 
+    router.post('/postTravel', scheduleController.postTravel);
+        //.get(movieController.getMovies);
+
+    /*router.route('/:movie_id')
+        .get(movieController.getMovie)
+        .put(movieController.putMovie)
+        .delete(movieController.deleteMovie);*/
+
+    return router;
+}

@@ -1,27 +1,28 @@
-import mongoose from 'mongoose';
+// Load required packages
+var mongoose = require('mongoose');
 
-const ScheduleSchema = new mongoose.Schema({
-
- TravelId: String,
-  TravelName: String,
-  days: 
+// Define our Schedule schema
+var ScheduleSchema   = new mongoose.Schema({
+    userid: String,
+    arrival: Date,
+    departure: Date,
+    travel: 
   [
       {
-          dayName: String,
-          dayDate: Date,
-          Attractions: 
-          [
-              {
-                  AttractionName: String,
-                  AttractionStartTime: Date,
-                  AttractionEndTime: Date,
-                  AttractionDuration: Number
-              }
-
-          ]
+          attractionId: String,
+          startTime: Date,
+          endTime: Date
       }
 
   ]
 });
 
-export default mongoose.model('Attraction', AttractionSchema);
+// Export the Mongoose model
+module.exports = mongoose.model('Schedule', ScheduleSchema);
+
+
+
+
+
+  
+  
