@@ -18,17 +18,20 @@ exports.postTravel = function(req, res) {
 };
 
 
- /*
-// Create endpoint /api/movies for GET
-exports.getMovies = function(req, res) {
-    Movie.find(function(err, movies) {
+ 
+//SB: Function to get all the travels.
+//URL: http://localhost:9000/api/travel/getTravel
+exports.getTravel = function(req, res) {
+    Travel.find(function(err, travels) {
         if (err) {
             res.status(400).send(err);
             return;
         }
-        res.json(movies);
+        res.json(travels);
     });
 };
+
+
 // Create endpoint /api/movies/:movie_id for GET
 exports.getMovie = function(req, res) {
     // Use the Movie model to find a specific movie
@@ -41,6 +44,8 @@ exports.getMovie = function(req, res) {
         res.json(movie);
     });
 };
+
+/*
 // Create endpoint /api/movies/:movie_id for PUT
 exports.putMovie = function(req, res) {
     // Use the Movie model to find a specific movie and update it

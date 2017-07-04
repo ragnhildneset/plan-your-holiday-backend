@@ -8,6 +8,7 @@ function travelRoutes() {
    
    //SB: Creating a travel 
     router.post('/postTravel', travelController.postTravel);
+    router.get('/getTravel', travelController.getTravel);
         //.get(movieController.getMovies);
 
     /*router.route('/:movie_id')
