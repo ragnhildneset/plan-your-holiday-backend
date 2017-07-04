@@ -1,42 +1,21 @@
-import mongoose from 'mongoose';
+// Load required packages
+var mongoose = require('mongoose');
 
-var travelSchema = new mongoose.Schema({
-  activity: {
-    type: mongoose.Schema.Types.ObjectId
-  },
-  date: {
-    type: Date
-  },
-  duration: {
-    type: Number
-  }
-  time: {
-    hours: {
-      type: Number
-    },
-    minutes: {
-      type: Number
-    }
-  }
+// Define our Schedule schema
+var TravelSchema   = new mongoose.Schema({
+    userid: String,
+    arrival: Date,
+    departure: Date,
+    schedule: 
+  [
+      {
+          attractionId: String,
+          startTime: Date,
+          endTime: Date
+      }
+
+  ]
 });
 
-var travelSchema = new mongoose.Schema({
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    required: true
-  },
-  arrival: {
-    type: Date
-  },
-  departure: {
-    type: Date
-  },
-  schedule: {
-    type: [activitySchema]
-  }
-});
-
-
-var Travel = mongoose.model('Travel', travelSchema);
-
-module.exports = Travel;
+// Export the Mongoose model
+module.exports = mongoose.model('Travel', TravelSchema);

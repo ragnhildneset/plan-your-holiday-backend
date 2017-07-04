@@ -1,20 +1,19 @@
 module.exports = travelRoutes;
 
-function travelRoutes(passport)
-{
+
+function travelRoutes() {
 
     var travelController = require('./travel.controller');
     var router = require('express').Router();
+   
+   //SB: Creating a travel 
+    router.post('/postTravel', travelController.postTravel);
+        //.get(movieController.getMovies);
 
-    //http://localhost:9000/api/user/login
-   /* router.post('/login',function(req,res)
-    {
-        res.send("Here at loging get");
-    });*/
-
-   //http://localhost:9000/api/user/singup
-    //router.post('/unregister', passport.authenticate('jwt', {session: false}),userController.unregister)
+    /*router.route('/:movie_id')
+        .get(movieController.getMovie)
+        .put(movieController.putMovie)
+        .delete(movieController.deleteMovie);*/
 
     return router;
-
 }

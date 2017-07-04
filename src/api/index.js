@@ -9,10 +9,10 @@ var jwtConfig = require('./passport/jwtConfig');
 
 //SB: Routers
 var userRoutes = require("./user/index");
-var scheduleRoutes = require("./schedule/index");
+var travelRoutes = require("./travel/index");
 router.use('/attractions', attraction);
 router.use('/user', userRoutes(passport));
-router.use('/schedule',scheduleRoutes());
+router.use('/travel',travelRoutes());
 
 
 
