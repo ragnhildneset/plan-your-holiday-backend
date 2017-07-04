@@ -2,7 +2,7 @@
 var Travel = require('./travel.model');
 
 //SB: Function to create the schedule for a trip.
-//URL: http://localhost:9000/api/schedule/postTravel
+//URL: http://localhost:9000/api/travel/postTravel
 exports.postTravel = function(req, res) {
     var travel = new Travel(req.body);
    
@@ -13,8 +13,7 @@ exports.postTravel = function(req, res) {
             res.status(400).send(err);
             return;
         }
-        res.status(201).json(m);
-        res.send(req.body);     
+        res.status(201).json(m);        
     });
 };
 
