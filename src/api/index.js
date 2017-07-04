@@ -14,7 +14,4 @@ router.use('/attractions', attraction);
 router.use('/user', userRoutes(passport));
 router.use('/travel',travelRoutes());
 
-
-
-
 export default router;

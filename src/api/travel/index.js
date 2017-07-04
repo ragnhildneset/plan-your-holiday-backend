@@ -8,13 +8,10 @@ function travelRoutes() {
    
    //SB: Creating a travel 
     router.post('/postTravel', travelController.postTravel);
-    router.get('/getTravel', travelController.getTravel);
-        //.get(movieController.getMovies);
-
-    /*router.route('/:movie_id')
-        .get(movieController.getMovie)
-        .put(movieController.putMovie)
-        .delete(movieController.deleteMovie);*/
+    router.get('/getTravels', travelController.getTravels);
+    router.route('/getTravel/:username')
+        .get(travelController.getUserTravel);
+        
 
     return router;
 }

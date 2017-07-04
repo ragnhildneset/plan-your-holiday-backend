@@ -5,7 +5,7 @@ var Travel = require('./travel.model');
 //URL: http://localhost:9000/api/travel/postTravel
 exports.postTravel = function(req, res) {
     var travel = new Travel(req.body);
-   
+  
     travel.save(function(err, m) 
     {
         if (err) 
@@ -13,7 +13,8 @@ exports.postTravel = function(req, res) {
             res.status(400).send(err);
             return;
         }
-        res.status(201).json(m);        
+        //res.status(201).json(m);
+        res.send(req.body);
     });
 };
 
@@ -21,7 +22,7 @@ exports.postTravel = function(req, res) {
  
 //SB: Function to get all the travels.
 //URL: http://localhost:9000/api/travel/getTravel
-exports.getTravel = function(req, res) {
+exports.getTravels = function(req, res) {
     Travel.find(function(err, travels) {
         if (err) {
             res.status(400).send(err);
@@ -33,47 +34,11 @@ exports.getTravel = function(req, res) {
 
 
 // Create endpoint /api/movies/:movie_id for GET
-exports.getMovie = function(req, res) {
-    // Use the Movie model to find a specific movie
-    Movie.findById(req.params.movie_id, function(err, movie) {
-        if (err) {
-            res.status(400).send(err)
-            return;
-        };
+exports.getUserTravel = function(req, res) {
 
-        res.json(movie);
-    });
-};
-
-/*
-// Create endpoint /api/movies/:movie_id for PUT
-exports.putMovie = function(req, res) {
-    // Use the Movie model to find a specific movie and update it
-    Movie.findByIdAndUpdate(
-        req.params.movie_id,
-        req.body,
-        {
-            //pass the new object to cb function
-            new: true,
-            //run validations
-            runValidators: true
-        }, function (err, movie) {
-        if (err) {
-            res.status(400).send(err);
-            return;
-        }
-        res.json(movie);
-    });
-};
-// Create endpoint /api/movies/:movie_id for DELETE
-exports.deleteMovie = function(req, res) {
-    // Use the Beer model to find a specific beer and remove it
-    Movie.findById(req.params.movie_id, function(err, m) {
-        if (err) {
-            res.status(400).send(err);
-            return;
-        }
-        m.remove();
-        res.sendStatus(200);
-    });
-};*/
+  Travel.findOne({ 'username': req.params.username },  function (err, travel) {
+  if (err) return handleError(err);
+  res.json(travel);
+  
+})}
+    
