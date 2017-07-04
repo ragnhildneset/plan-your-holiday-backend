@@ -30,7 +30,7 @@ var userSchema = new mongoose.Schema({
   }
 });
 
-/* SB: I think this function reacts to the SAVE event, and encrypts the password*/
+/* SB: Function reacts to the SAVE event, and encrypts the password*/
 userSchema.pre('save', function(next) {
     var user = this;
 
