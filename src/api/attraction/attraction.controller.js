@@ -37,6 +37,15 @@ export function top(req, res, next) {
    });
 }
 
+// return the list of the top attractions for a given number
+export function best(req, res, next) {
+  Attraction.find().sort({'rating.quality.rating': -1}).limit(parseInt(req.params.limit)).exec( function (err, docs) {
+   if (err)
+       res.send(err);
+   res.json(docs);
+   });
+}
+
 exports.get = function(req, res){
   Attraction.find().exec(function(err, attraction){
     res.jsonp(attraction);

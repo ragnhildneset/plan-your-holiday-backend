@@ -13,5 +13,6 @@ router.get('/category/:category', controller.category);
 // get n attractions of a given category in a descending order
 // e.g. api/attractions/top/3/Museums
 router.get('/top/:limit/:category', controller.top);
+router.get('/top/:limit', controller.best);
 
 export default router;
