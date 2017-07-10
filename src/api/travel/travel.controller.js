@@ -21,7 +21,7 @@ exports.postTravel = function(req, res) {
 
  
 //SB: Function to get all the travels.
-//URL: http://localhost:9000/api/travel/getTravel
+//URL: http://localhost:9000/api/travel/getTravels
 exports.getTravels = function(req, res) {
     Travel.find(function(err, travels) {
         if (err) {
@@ -33,10 +33,12 @@ exports.getTravels = function(req, res) {
 };
 
 
-// Create endpoint /api/movies/:movie_id for GET
-exports.getUserTravel = function(req, res) {
+//SB: Returns a trip based in the ID
+exports.getTravelbyID = function(req, res) 
+{
 
-  Travel.findOne({ 'username': req.params.username },  function (err, travel) {
+   // res.send(req.params._id);
+  Travel.findOne({ '_id': req.params._id },  function (err, travel) {
   if (err) return handleError(err);
   res.json(travel);
   
