@@ -14,5 +14,6 @@ router.get('/category/:category', controller.category);
 // e.g. api/attractions/top/3/Museums
 router.get('/top/:limit/:category', controller.top);
 router.get('/top/:limit', controller.best);
+router.get('/top/', controller.all);
 
 export default router;

@@ -30,7 +30,7 @@ var userSchema = new mongoose.Schema({
   }
 });
 
-/* SB: I think this function reacts to the SAVE event, and encrypts the password*/
+/* SB: Function runs before to the SAVE event, and encrypts the password*/
 userSchema.pre('save', function(next) {
     var user = this;
 
@@ -59,6 +59,4 @@ userSchema.methods.comparePassword = function(candidatePassword, cb) {
 };
 
 
-var User = mongoose.model('User', userSchema);
-
-module.exports = User;
+export default mongoose.model('User', userSchema);

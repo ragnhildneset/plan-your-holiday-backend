@@ -45,6 +45,14 @@ export function best(req, res, next) {
    res.json(docs);
    });
 }
+// return the list of all attrations ordered by quality
+export function all(req, res, next) {
+  Attraction.find().sort({'rating.quality.rating': -1}).exec( function (err, docs) {
+   if (err)
+       res.send(err);
+   res.json(docs);
+   });
+}
 
 
 exports.get = function(req, res){
