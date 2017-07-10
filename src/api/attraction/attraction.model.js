@@ -33,4 +33,11 @@ const AttractionSchema = new mongoose.Schema({
   }
 });
 
+AttractionSchema.statics = {
+  load: function(id, cb){
+    this.findOne({_id: id}).exec(cb);
+  }
+};
+
+
 export default mongoose.model('Attraction', AttractionSchema);
