@@ -23,7 +23,8 @@ export default {
           rating: 4.3,
           amount: 3000
         }
-      }
+      },
+      filename: 'http://images.portal.muenchen.de/upload/media/000/000/218/684/resized/0750x0310/detail-staatliche-antikensammlungen.jpg'
     },
     {
       _id: Types.ObjectId('56ca0db353c8040f4cc54638'),
@@ -45,8 +46,10 @@ export default {
           rating: 4.1,
           amount: 2000
         }
-      }
+      },
+      filename: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9ODuf4URg1UixR7goPzVSNUWA583Zc_rAlYlTolqTe6DYs1GZ'
     },
+
     {
       _id: Types.ObjectId('56aa0db363c8140f4cc54639'),
       title: 'Feldherrenhalle',
@@ -67,7 +70,8 @@ export default {
           rating: 4.4,
           amount: 4500
         }
-      }
+      },
+      filename: 'http://images.portal.muenchen.de/upload/media/000/000/218/396/resized/0640x0264/feldherrnhalle-detail.jpg'
     },
     {
       _id: Types.ObjectId('56aa0db353c8041f4cc54640'),
@@ -89,7 +93,8 @@ export default {
           rating: 4.8,
           amount: 6000
         }
-      }
+      },
+      filename: 'http://www.br.de/radio/bayern2/bayern/zeit-fuer-bayern/mariensaeule-patrona-bavariae-100~_v-img__16__9__xl_-d31c35f8186ebeb80b0cd843a7c267a0e0c81647.jpg?version=111cf'
     },
     {
       _id: Types.ObjectId('56aa0db353c8040f4cc54641'),
@@ -111,7 +116,8 @@ export default {
           rating: 3.1,
           amount: 600
         }
-      }
+      },
+      filename: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREhmxzFTDYnFnrjNIEGlJ9vdAGL6kzGiuV-FdH0rzUMvz1u3F26w'
     },
 
     {
@@ -134,7 +140,8 @@ export default {
           rating: 3.1,
           amount: 1000
         }
-      }
+      },
+      filename: 'https://www.codart.nl/wp-content/uploads/2016/11/148046346895151361.jpg'
     },
     {
       _id: Types.ObjectId('56aa0db353d8040f4cc54643'),
@@ -156,7 +163,8 @@ export default {
           rating: 3.6,
           amount: 1000
         }
-      }
+      },
+      filename: 'http://museen-in-muenchen.de/fileadmin/user_upload/museumscontent/neue-pinakothek/bildergalerie/neue_pinakothek_01.jpg'
     },
     {
       _id: Types.ObjectId('56aa0db353c8040e4cc54644'),
@@ -178,7 +186,8 @@ export default {
           rating: 3.1,
           amount: 1500
         }
-      }
+      },
+      filename: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNc5XW0zfvySdkyz-N4JMoqYo_Pl9vEDfosf7uOGgG6mj6AKzGCg'
     },
     {
       _id: Types.ObjectId('56aa0db354c8040f4cc54645'),
@@ -200,7 +209,8 @@ export default {
           rating: 2.3,
           amount: 700
         }
-      }
+      },
+      filename: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqsl-keFVoaqi5h7DOoIUbul8afkWTbh0tSBVH3sSc0lYeUkF_'
     },
     {
       _id: Types.ObjectId('56aa0db353c8040f4cc54646'),
@@ -222,7 +232,8 @@ export default {
           rating: 3.7,
           amount: 900
         }
-      }
+      },
+      filename: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRPOdHq_vhyeau3KUivRc4XDWQEyITdFdDAaZtHvc59nLQkjo7'
     },
 
     {
@@ -267,7 +278,8 @@ export default {
           rating: 1.8,
           amount: 1000
         }
-      }
+      },
+      filename: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0T8Meu17GVJvCs3kVArtYELSamKL5-X4knfVniX3bRFTfrx5a1w'
     },
     {
       _id: Types.ObjectId('56aa0db353c8040f4cc54649'),
@@ -289,7 +301,8 @@ export default {
           rating: 4.7,
           amount: 5000
         }
-      }
+      },
+      filename: 'http://res.muenchen-p.de/.imaging/stk/responsive/image300/dms/aktuell-2016/mde/monopteros/monopteros-2/document/monopteros-2.jpg'
     },
     {
       _id: Types.ObjectId('56aa0db353c8040f4cc54650'),
@@ -311,7 +324,8 @@ export default {
           rating: 4.7,
           amount: 6000
         }
-      }
+      },
+      filename: 'https://www.goeuro.de/blog/wp-content/uploads/2014/05/Freiluftkino-in-München-Kino-am-Olympiasee.jpg'
     },
     {
       _id: Types.ObjectId('56aa0db353c8040f4cc54651'),
@@ -333,7 +347,8 @@ export default {
           rating: 2.1,
           amount: 2000
         }
-      }
+      },
+      filename: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoAKBGkHgrMeP9w9vWWpAtqlxuLx9EnhouIYtx3qa4L5zHekB5Ag'
     },
 
     {
@@ -422,7 +437,8 @@ export default {
           rating: 4.3,
           amount: 2000
         }
-      }
+      },
+      filename: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0kdHzlGrXplRPLyVCKzdyBn590uGl12jY1QYrW-lWtNebg9dU'
     },
     {
       _id: Types.ObjectId('56aa0db353c8040f4cc54656'),

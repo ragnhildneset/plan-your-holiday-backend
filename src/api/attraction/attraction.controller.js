@@ -54,6 +54,7 @@ export function all(req, res, next) {
    });
 }
 
+
 exports.get = function(req, res){
   Attraction.find().exec(function(err, attraction){
     res.jsonp(attraction);
