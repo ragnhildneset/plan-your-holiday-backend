@@ -30,7 +30,9 @@ const AttractionSchema = new mongoose.Schema({
       rating: Number,
       amount: Number
     }
-  }
+  },
+  filename: {
+    type: String }
 });
 
 AttractionSchema.statics = {
