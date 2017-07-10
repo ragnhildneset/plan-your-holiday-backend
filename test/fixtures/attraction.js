@@ -393,7 +393,8 @@ export default {
           rating: 1.8,
           amount: 1000
         }
-      }
+      },
+      filename: 'http://res.muenchen-p.de/fl_progressive,q_65/.imaging/stk/responsive/galleryPreview600/dms/sw/c/shutterstock/alter-peter-panorama/document/alter-peter-panorama.jpg'
     },
     {
       _id: Types.ObjectId('56aa0db353c8040f4cc54654'),
