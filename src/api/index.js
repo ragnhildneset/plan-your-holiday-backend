@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import attraction from './attraction';
-
+import city from './city';
 
 const router = Router();
 
@@ -13,5 +13,6 @@ var travelRoutes = require("./travel/index");
 router.use('/attractions', attraction);
 router.use('/user', userRoutes(passport));
 router.use('/travel',travelRoutes());
+router.use('/cities', city);
 
 export default router;

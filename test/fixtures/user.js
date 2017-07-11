@@ -1,5 +1,3 @@
-import { Types } from 'mongoose';
-
 export default {
   model: 'User',
   data: [
