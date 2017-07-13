@@ -5,11 +5,9 @@ var Travel = require('./travel.model');
 //URL: http://localhost:9000/api/travel/postTravel
 exports.postTravel = function(req, res) {
     var travel = new Travel(req.body);
-  
-    travel.save(function(err, m) 
-    {
-        if (err) 
-        {
+
+    travel.save(function(err, m) {
+        if (err) {
             res.status(400).send(err);
             return;
         }
@@ -18,8 +16,6 @@ exports.postTravel = function(req, res) {
     });
 };
 
-
- 
 //SB: Function to get all the travels.
 //URL: http://localhost:9000/api/travel/getTravels
 exports.getTravels = function(req, res) {
@@ -32,15 +28,10 @@ exports.getTravels = function(req, res) {
     });
 };
 
-
 //SB: Returns a trip based in the ID
-exports.getTravelbyID = function(req, res) 
-{
-
-   // res.send(req.params._id);
-  Travel.findOne({ '_id': req.params._id },  function (err, travel) {
-  if (err) return handleError(err);
-  res.json(travel);
-  
-})}
-    
+exports.getTravelbyID = function(req, res) {
+    Travel.findOne({ '_id': req.params._id },  function (err, travel) {
+      if (err) return handleError(err);
+      res.json(travel);
+    });
+};
