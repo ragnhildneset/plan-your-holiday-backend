@@ -60,3 +60,12 @@ exports.get = function(req, res){
     res.jsonp(attraction);
   });
 };
+
+// get a list of attractions belonging to one city, sorted by most popular
+export function getAllFromCityId(req, res, next) {
+  Attraction.find({ city: req.params.city }).sort({ 'rating.quality.rating': -1 })
+    .then((attractions) => {
+      res.json(attractions);
+    })
+    .catch(next);
+}
