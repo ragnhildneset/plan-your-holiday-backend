@@ -16,4 +16,7 @@ router.get('/top/:limit/:category', controller.top);
 router.get('/top/:limit', controller.best);
 router.get('/top/', controller.all);
 
+// get a list of attractions belonging to one city, sorted by most popular
+router.get('/city/:city', controller.getAllFromCityId);
+
 export default router;
