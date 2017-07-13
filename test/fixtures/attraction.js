@@ -462,6 +462,53 @@ export default {
           amount: 1000
         }
       }
+    },
+    {
+      _id: Types.ObjectId('56aa0db353c8040f4cc54657'),
+      title: 'Eiffel Tower',
+      city: Types.ObjectId('56aa0db353c8040f4cc54648'),
+      address: ' Champ de Mars',
+      duration: 30,
+      category: 'Churches',
+      coordinates: {
+        latitude: 48.148872,
+        longitude: 11.5812088
+      },
+      rating: {
+        quality: {
+          rating: 3.9,
+          amount: 1000
+        },
+        popularity: {
+          rating: 4.8,
+          amount: 1000
+        }
+      },
+      filename: 'https://cdn.getyourguide.com/img/tour_img-376513-70.jpg'
+
+    },
+    {
+      _id: Types.ObjectId('56aa0db353c8040f4cc54658'),
+      title: 'Big Ben',
+      city: Types.ObjectId('56aa0db353c8040f4cc54649'),
+      address: ' Champ de Mars',
+      duration: 30,
+      category: 'Churches',
+      coordinates: {
+        latitude: 48.148872,
+        longitude: 11.5812088
+      },
+      rating: {
+        quality: {
+          rating: 4.2,
+          amount: 1000
+        },
+        popularity: {
+          rating: 5,
+          amount: 1000
+        }
+      },
+      filename: 'https://cdn.getyourguide.com/niwziy2l9cvz/3TLDUtWWacU8gwW0o6m4km/7e9164a5dd180d8d29dec20142897f24/london-bigben-1500x850.jpg'
     }
   ]
 };
