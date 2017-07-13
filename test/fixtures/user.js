@@ -2,6 +2,7 @@ export default {
   model: 'User',
   data: [
     {
+      _id: Types.ObjectId('56aa0dc353c8040f4bb54637')
       username: "Ragnhild Neset",
       loginid: "rags",
       password: "password",
