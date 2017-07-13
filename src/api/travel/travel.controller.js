@@ -35,3 +35,11 @@ exports.getTravelbyID = function(req, res) {
       res.json(travel);
     });
 };
+
+//JF: Returns a trip based in the username
+exports.getTravelbyUsername = function(req, res) {
+    Travel.findOne({ 'username': req.params.username },  function (err, travel) {
+      if (err) return handleError(err);
+      res.json(travel);
+    });
+};
