@@ -39,8 +39,6 @@ module.exports.login = function (req, res) {
             {
                 //res.status(200).json({token: createToken(user)});
                 res.status(200).json({token: createToken(user)});
-
-
             }
 
         });

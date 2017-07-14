@@ -11,7 +11,8 @@ if (config.env === 'production') {
 const fixtures = [
   'attraction.js',
   'user.js',
-  'city.js'
+  'city.js',
+  'travel.js'
 ]
 .map(file => `${__dirname}/fixtures/${file}`);
 

@@ -1,20 +1,22 @@
 // Load required packages
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 // Define our Schedule schema
-var TravelSchema   = new mongoose.Schema({
-    user: {type: mongoose.Schema.Types.ObjectId,  require: true, unique: true},
-    arrival: Date,
-    departure: Date,
-    isRated: Boolean,
-    schedule:
-  [
-      {
-          attractionId: String,
-          startTime: String,
-          endTime: String,
-          booking: String
-      }
+const TravelSchema = new mongoose.Schema({
+  user: { type: mongoose.Schema.Types.ObjectId, require: true, unique: true },
+  city: mongoose.Schema.Types.ObjectId,
+  cityName: String,
+  arrival: Date,
+  departure: Date,
+  isRated: Boolean,
+  schedule: [
+    {
+      attractionId: mongoose.Schema.Types.ObjectId,
+      attractionName: String,
+      startTime: String,
+      endTime: String,
+      booking: String
+    }
   ]
 });
 
