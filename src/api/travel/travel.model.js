@@ -6,7 +6,7 @@ var TravelSchema   = new mongoose.Schema({
     username: { type: String,  require: true, unique: true},
     arrival: Date,
     departure: Date,
-    schedule: 
+    schedule:
   [
       {
           attractionId: String,

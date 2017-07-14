@@ -30,7 +30,16 @@ const AttractionSchema = new mongoose.Schema({
       rating: Number,
       amount: Number
     }
-  }
+  },
+  filename: {
+    type: String }
 });
+
+AttractionSchema.statics = {
+  load: function(id, cb){
+    this.findOne({_id: id}).exec(cb);
+  }
+};
+
 
 export default mongoose.model('Attraction', AttractionSchema);
