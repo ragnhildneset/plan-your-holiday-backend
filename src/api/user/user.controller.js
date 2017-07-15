@@ -7,7 +7,7 @@ const jwt = require('jwt-simple');
 
 /* SB: Creates a function to call for login*/
 module.exports.login = function (req, res) {
-  if (!req.body.username) {
+  if (!req.body.loginid) {
     res.status(400).send('User name required');
     return;
   }
@@ -16,7 +16,7 @@ module.exports.login = function (req, res) {
     return;
   }
 
-   User.findOne({loginid: req.body.username},function(err, user)
+   User.findOne({loginid: req.body.loginid},function(err, user)
    {
        if (err)
        {
@@ -52,7 +52,7 @@ function createToken(user) {
   const tokenPayload = {
       user: {
           _id: user._id,
-          username: user.username
+          loginid: user.loginid
       }
 
   };
@@ -63,24 +63,26 @@ function createToken(user) {
 module.exports.singup = function (req,res)
 {
 
-    if(!req.body.username)
+    if(!req.body.loginid)
     {
-        res.status(400).send('username required');
+        res.status(400).send('Login id is required');
         return;
     }
     if(!req.body.password)
     {
-        res.status(400).send('password required');
+        res.status(400).send('Password required');
         return;
     }
+    //name, email, loginid, password, birthdate, density
 
     var user = new User();
     user.username = req.body.username;
-    user.loginid = req.body.loginid;
-    user.password = req.body.password;
     user.email = req.body.email;
+    user.loginid = req.body.loginid;
+    user.password = req.body.password;    
     user.birthday = req.body.birthday;
     user.density = req.body.density;
+    user.currency = req.body.currency;
 
     user.save(function(err) {
       if (err) {

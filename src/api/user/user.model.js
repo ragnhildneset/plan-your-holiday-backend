@@ -4,14 +4,15 @@ import bcrypt from 'bcrypt-nodejs';
 var userSchema = new mongoose.Schema({
   username: {
     type: String,
-    require: true,
-    unique: true
+    require: true
   },
+  
   loginid: {
     type: String,
     require: true,
     unique: true
   },
+  
   password: {
     type: String,
     required: true
@@ -25,7 +26,7 @@ var userSchema = new mongoose.Schema({
   density: {
     type: Number
   },
-  attraction: {
+  currency: {
     type: String
   }
 });
