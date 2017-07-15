@@ -69,3 +69,41 @@ export function getAllFromCityId(req, res, next) {
     })
     .catch(next);
 }
+
+function newRating(currentRating, amount, newRating) {
+  return (newRating/(amount + 1)) + (rating * amount/(amount+1));
+}
+
+// TO-DO put rating and updating 
+export function rating(req, res, next) {
+  var ratings = [{ attractionId : '56aa0dc353c8040f4cc54637', quality:2, popularity:2}]
+  for (var i = 0; i < ratings.length; i++) {
+    var rating = ratings[i];
+
+    Attraction.findOne({attractionId: rating.attractionId})
+      .then((attraction) => {
+        var newObject = { rating: {
+          quality: {
+            rating: newRating(attraction.rating.quality.rating, attraction.rating.quality.amount, rating.quality);
+            amount: attraction.rating.quality.amount + 1
+          },
+          popularity: {
+            rating: newRating(attraction.rating.popularity.rating, attraction.rating.popularity.amount, rating.popularity);,
+            amount: attraction.rating.popularity.amount + 1
+          }
+        }}
+        Attraction.findByIdAndUpdate(
+              rating.attractionId,
+              newObject)
+              .then() => {
+                res.json(city);
+              })
+              .catch(next);
+
+          });
+      });
+
+
+
+  }
+}
