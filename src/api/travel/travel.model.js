@@ -10,9 +10,10 @@ var TravelSchema   = new mongoose.Schema({
   [
       {
           attractionId: String,
+          attractionname: String,
           startTime: String,
           endTime: String,
-          booking: String
+          url: String
       }
 
   ]
