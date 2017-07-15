@@ -6,6 +6,7 @@ export default {
     {
       _id: Types.ObjectId('56aa0dc353c8040f4cc54637'),
       title: 'Königsplatz',
+       url : "http://www.muenchen.de/sehenswuerdigkeiten/orte/130668.html",
       city: Types.ObjectId('56aa0db353c8040f4cc54647'),
       address: 'Königsplatz',
       duration: 30,
@@ -29,6 +30,7 @@ export default {
     {
       _id: Types.ObjectId('56ca0db353d8040f4cc54638'),
       title: 'Siegestor',
+      url : "http://www.muenchen.de/sehenswuerdigkeiten/orte/120454.html",
       city: Types.ObjectId('56aa0db353c8040f4cc54647'),
       address: 'Leopoldstraße',
       duration: 20,
@@ -53,6 +55,7 @@ export default {
     {
       _id: Types.ObjectId('56aa0db363c8140f4cc54639'),
       title: 'Feldherrenhalle',
+      url : "http://www.schloesser.bayern.de/deutsch/schloss/objekte/mu_feldh.htm",
       city: Types.ObjectId('56aa0db353c8040f4cc54647'),
       address: 'Residenzstraße',
       duration: 30,
@@ -76,6 +79,7 @@ export default {
     {
       _id: Types.ObjectId('56aa0db353c8041f4cc54640'),
       title: 'Mariensäule',
+      url : "http://www.muenchen.de/dienstleistungsfinder/muenchen/1070900/",
       city: Types.ObjectId('56aa0db353c8040f4cc54647'),
       address: 'Marienplatz',
       duration: 30,
@@ -99,6 +103,7 @@ export default {
     {
       _id: Types.ObjectId('56aa0db353c8040f4cc54641'),
       title: 'Obelisk',
+      url : "https://www.muenchen.de/rathaus/Stadtverwaltung/baureferat/oeffentlicher-raum/denkmaeler/obelisk_karolinenplatz.html",
       city: Types.ObjectId('56aa0db353c8040f4cc54647'),
       address: 'Karolinenplatz',
       duration: 20,
@@ -123,6 +128,7 @@ export default {
     {
       _id: Types.ObjectId('56aa1db353c8040f4cc54642'),
       title: 'Alte Pinakothek',
+      url : 'https://www.pinakothek.de/',
       city: Types.ObjectId('56aa0db353c8040f4cc54647'),
       address: 'Barer Straße',
       duration: 180,
@@ -146,6 +152,7 @@ export default {
     {
       _id: Types.ObjectId('56aa0db353d8040f4cc54643'),
       title: 'Neue Pinakothek',
+      url: 'https://www.pinakothek.de/besuch/neue-pinakothek',
       city: Types.ObjectId('56aa0db353c8040f4cc54647'),
       address: 'Barer Straße',
       category: 'Museums',
@@ -169,6 +176,7 @@ export default {
     {
       _id: Types.ObjectId('56aa0db353c8040e4cc54644'),
       title: 'Pinakothek der Moderne',
+      url:'https://www.pinakothek.de/besuch/pinakothek-der-moderne',
       city: Types.ObjectId('56aa0db353c8040f4cc54647'),
       address: 'Barer Straße',
       category: 'Museums',
@@ -192,6 +200,7 @@ export default {
     {
       _id: Types.ObjectId('56aa0db354c8040f4cc54645'),
       title: 'Sammlung Brandhorst',
+      url: 'http://www.museum-brandhorst.de/cc%C4%8F%C3%A7c#2',
       city: Types.ObjectId('56aa0db353c8040f4cc54647'),
       address: 'Theresienstraße',
       category: 'Museums',
@@ -215,6 +224,7 @@ export default {
     {
       _id: Types.ObjectId('56aa0db353c8040f4cc54646'),
       title: 'Lenbachhaus',
+      url: 'http://www.lenbachhaus.de/',
       city: Types.ObjectId('56aa0db353c8040f4cc54647'),
       address: 'Luisenstraße',
       category: 'Museums',
@@ -239,6 +249,7 @@ export default {
     {
       _id: Types.ObjectId('56aa0db353c8040f4cc54647'),
       title: 'Old botanic Garden',
+      url:'http://www.muenchen.de/sehenswuerdigkeiten/orte/120227.html',
       city: Types.ObjectId('56aa0db353c8040f4cc54647'),
       address: 'Sophienstraße',
       category: 'Parks',
@@ -261,6 +272,7 @@ export default {
     {
       _id: Types.ObjectId('56aa0db353c8040f4cc54648'),
       title: 'Botanic Garden',
+      url: 'http://www.muenchen.de/sehenswuerdigkeiten/orte/120227.html',
       city: Types.ObjectId('56aa0db353c8040f4cc54647'),
       address: 'Menzinger Straße 65',
       category: 'Parks',
@@ -284,6 +296,7 @@ export default {
     {
       _id: Types.ObjectId('56aa0db353c8040f4cc54649'),
       title: 'English Garden',
+      url: 'http://www.muenchen.de/sehenswuerdigkeiten/orte/120242.html',
       city: Types.ObjectId('56aa0db353c8040f4cc54647'),
       address: '',
       duration: 120,
@@ -307,6 +320,7 @@ export default {
     {
       _id: Types.ObjectId('56aa0db353c8040f4cc54650'),
       title: 'Olympiapark',
+      url: 'http://www.olympiapark.de/de/olympiapark-muenchen/',
       city: Types.ObjectId('56aa0db353c8040f4cc54647'),
       address: 'Spiridon-Louis-Ring',
       duration: 120,
@@ -330,6 +344,7 @@ export default {
     {
       _id: Types.ObjectId('56aa0db353c8040f4cc54651'),
       title: 'Hofgarten',
+      url: 'http://www.muenchen.de/sehenswuerdigkeiten/orte/120231.html',
       city: Types.ObjectId('56aa0db353c8040f4cc54647'),
       address: 'Hofgartenstraße',
       duration: 30,
@@ -354,6 +369,7 @@ export default {
     {
       _id: Types.ObjectId('56aa0db353c8040f4cc54652'),
       title: 'Theatinerkirche',
+      url:'http://www.theatinerkirche.de/',
       city: Types.ObjectId('56aa0db353c8040f4cc54647'),
       address: 'Salvatorplatz',
       duration: 30,
@@ -421,6 +437,7 @@ export default {
     {
       _id: Types.ObjectId('56aa0db353c8040f4cc54655'),
       title: 'Frauenkirche',
+      url: 'https://www.muenchner-dom.de/home/',
       city: Types.ObjectId('56aa0db353c8040f4cc54647'),
       address: 'Frauenplatz',
       duration: 30,
@@ -444,6 +461,7 @@ export default {
     {
       _id: Types.ObjectId('56aa0db353c8040f4cc54656'),
       title: 'Saint Ludwigs Church',
+      url:'http://www.st-ludwig-muenchen.de/',
       city: Types.ObjectId('56aa0db353c8040f4cc54647'),
       address: 'Ludwigstraße',
       duration: 30,
@@ -466,6 +484,7 @@ export default {
     {
       _id: Types.ObjectId('56aa0db353c8040f4cc54657'),
       title: 'Eiffel Tower',
+      url:'http://www.toureiffel.paris/',
       city: Types.ObjectId('56aa0db353c8040f4cc54648'),
       address: ' Champ de Mars',
       duration: 30,
@@ -490,6 +509,7 @@ export default {
     {
       _id: Types.ObjectId('56aa0db353c8040f4cc54658'),
       title: 'Big Ben',
+      url:'http://www.parliament.uk/bigben',
       city: Types.ObjectId('56aa0db353c8040f4cc54649'),
       address: ' Champ de Mars',
       duration: 30,
