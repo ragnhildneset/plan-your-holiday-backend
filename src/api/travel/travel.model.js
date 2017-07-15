@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 
 // Define our Schedule schema
 var TravelSchema   = new mongoose.Schema({
-    username: { type: String,  require: true, unique: true},
+    username: String,
     arrival: Date,
     departure: Date,
     schedule:

@@ -74,7 +74,8 @@ function createToken(user) {
       user: {
           _id: user._id,
           username: user.username,
-          loginid: user.loginid
+          loginid: user.loginid,
+          density: user.density
       }
   };
   return jwt.encode(tokenPayload, Config.secret);
