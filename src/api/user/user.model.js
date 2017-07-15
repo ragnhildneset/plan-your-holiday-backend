@@ -6,19 +6,19 @@ var userSchema = new mongoose.Schema({
     type: String,
     require: true
   },
-  
+
   loginid: {
     type: String,
     require: true,
     unique: true
   },
-  
+
   password: {
     type: String,
     required: true
   },
   email: String,
-  birthday: Date,
+  birthday: String,
   density: Number,
   phonenumber: Number,
   attraction: String

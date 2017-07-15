@@ -35,6 +35,27 @@ exports.getTravels = function(req, res) {
     });
 };
 
+exports.getTravelsbyUsername = function(req, res) {
+    Travel.find({username: req.params.username}).exec(function(err, travels) {
+        if (err) {
+            res.status(400).send(err);
+            return;
+        }
+        res.json(travels);
+    });
+};
+
+exports.getLatest = function(req, res) {
+    Travel.findOne({username: req.params.username}).sort({ sort: { 'created_at' : -1 } }).exec(function(err, travels) {
+        if (err) {
+            res.status(400).send(err);
+            return;
+        }
+        res.json(travels);
+    });
+};
+
+
 //SB: Returns a trip based in the ID
 exports.getTravelbyID = function(req, res) {
     Travel.findOne({ '_id': req.params._id },  function (err, travel) {

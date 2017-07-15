@@ -9,6 +9,8 @@ function travelRoutes() {
    //SB: Creating a travel
     router.post('/postTravel', travelController.postTravel);
     router.get('/getTravels', travelController.getTravels);
+    router.get('/getTravels/:username', travelController.getTravelsbyUsername);
+    router.get('/getLatest/:username', travelController.getLatest);
     router.get('/getTravel/:_id', travelController.getTravelbyID);
     router.get('/getTravelByUser/:username', travelController.getTravelbyUsername);
 
