@@ -4,8 +4,7 @@ import bcrypt from 'bcrypt-nodejs';
 var userSchema = new mongoose.Schema({
   username: {
     type: String,
-    require: true,
-    unique: true
+    require: true
   },
   loginid: {
     type: String,
@@ -16,18 +15,11 @@ var userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  email: {
-    type: String
-  },
-  birthday: {
-    type: Date
-  },
-  density: {
-    type: Number
-  },
-  attraction: {
-    type: String
-  }
+  email: String,
+  birthday: Date,
+  density: Number,
+  phonenumber: Number,
+  attraction: String
 });
 
 /* SB: Function runs before to the SAVE event, and encrypts the password*/
