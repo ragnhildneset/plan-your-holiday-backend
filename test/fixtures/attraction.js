@@ -27,7 +27,7 @@ export default {
       filename: 'http://images.portal.muenchen.de/upload/media/000/000/218/684/resized/0750x0310/detail-staatliche-antikensammlungen.jpg'
     },
     {
-      _id: Types.ObjectId('56ca0db353c8040f4cc54638'),
+      _id: Types.ObjectId('56ca0db353d8040f4cc54638'),
       title: 'Siegestor',
       city: Types.ObjectId('56aa0db353c8040f4cc54647'),
       address: 'Leopoldstraße',

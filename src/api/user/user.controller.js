@@ -1,9 +1,40 @@
 import User from './user.model';
-
 import Config from '../../config';
 
 const jwt = require('jwt-simple');
 
+export function getPreferences(req, res, next) {
+   User.findOne({loginid: req.params.loginid}).exec( function (err, docs) {
+   if (err)
+       res.send(err);
+   res.json(docs);
+   });
+}
+
+export function setPreferences(req, res, next) {
+   User.findByIdAndUpdate(
+       req.params.loginid,
+       req.body,
+       { new: true, runValidators: true },
+       function (err, docs) {
+         if (err) {
+             res.status(500).send(err);
+             return;
+         }
+       res.json(docs);
+   });
+}
+
+export function deleteUser(req, res) {
+    User.findById(req.params.loginid, function(err, u) {
+        if (err) {
+            res.status(500).send(err);
+            return;
+        }
+        u.remove();
+        res.sendStatus(200);
+    });
+};
 
 /* SB: Creates a function to call for login*/
 module.exports.login = function (req, res) {
@@ -16,35 +47,25 @@ module.exports.login = function (req, res) {
     return;
   }
 
-   User.findOne({loginid: req.body.loginid},function(err, user)
-   {
-       if (err)
-       {
+   User.findOne({loginid: req.body.username},function(err, user) {
+       if (err) {
             res.status(500).send(err);
             return;
         }
 
-        if (!user)
-        {
+        if (!user) {
             res.status(401).send('Invalid Credentials');
             return;
         }
 
-        user.comparePassword(req.body.password, function(err, isMatch)
-        {
-            if(!isMatch || err)
-            {
+        user.comparePassword(req.body.password, function(err, isMatch) {
+            if(!isMatch || err) {
                 res.status(401).send('Invalid Credentials');
-            } else
-            {
+            } else {
                 //res.status(200).json({token: createToken(user)});
                 res.status(200).json({token: createToken(user)});
-
-
             }
-
         });
-
    });
 }
 
@@ -52,25 +73,21 @@ function createToken(user) {
   const tokenPayload = {
       user: {
           _id: user._id,
+          username: user.username,
           loginid: user.loginid
       }
-
   };
   return jwt.encode(tokenPayload, Config.secret);
 }
 
 /*SB: Function to create an User*/
-module.exports.singup = function (req,res)
-{
-
-    if(!req.body.loginid)
-    {
-        res.status(400).send('Login id is required');
+module.exports.singup = function (req,res) {
+    if(!req.body.username) {
+        res.status(400).send('username required');
         return;
     }
-    if(!req.body.password)
-    {
-        res.status(400).send('Password required');
+    if(!req.body.password) {
+        res.status(400).send('password required');
         return;
     }
     //name, email, loginid, password, birthdate, density
@@ -82,7 +99,7 @@ module.exports.singup = function (req,res)
     user.password = req.body.password;    
     user.birthday = req.body.birthday;
     user.density = req.body.density;
-    user.currency = req.body.currency;
+    user.phonenumber = 0;
 
     user.save(function(err) {
       if (err) {
