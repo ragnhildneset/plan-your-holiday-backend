@@ -78,8 +78,8 @@ function newRating(currentRating, amount, newRating) {
 // TO-DO put rating and updating
 export function rateAttractions(req, res, next) {
   // Mocka: en liste av nye ratings, en bruker rater en hel reise av gangen
-  const ratings = [{ attractionId: '56aa0dc353c8040f4cc54637', quality: 2, popularity: 2 }, { attractionId: '56ca0db353d8040f4cc54638', quality: 5, popularity: 5 }]
-
+  // const ratings = [{ attractionId: '56aa0dc353c8040f4cc54637', quality: 2, popularity: 2 }, { attractionId: '56ca0db353d8040f4cc54638', quality: 5, popularity: 5 }]
+  const ratings = req.body.ratings;
   // For hver attraction: Oppdater rating
   Promise.map(ratings, rating =>
     Attraction.findOne(
