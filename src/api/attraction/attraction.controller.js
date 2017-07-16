@@ -84,7 +84,7 @@ export function rateAttractions(req, res, next) {
   // For hver attraction: Oppdater rating
   Promise.map(ratings, rating =>
     Attraction.findOne(
-      { _id: rating.attractionId }
+      { title: rating.attractionname }
     ).then((attraction) => {
       attraction.rating.quality.rating = newRating(
         attraction.rating.quality.rating,
