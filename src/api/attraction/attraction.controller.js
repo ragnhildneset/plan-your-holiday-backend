@@ -79,13 +79,13 @@ function newRating(currentRating, amount, newRating) {
 export function rateAttractions(req, res, next) {
   // Mocka: en liste av nye ratings, en bruker rater en hel reise av gangen
   // const ratings = [{ attractionId: '56aa0dc353c8040f4cc54637', quality: 2, popularity: 2 }, { attractionId: '56ca0db353d8040f4cc54638', quality: 5, popularity: 5 }]
-  const ratings = req.body.ratings;
+  const ratings = req.body;
+
   // For hver attraction: Oppdater rating
   Promise.map(ratings, rating =>
     Attraction.findOne(
       { _id: rating.attractionId }
     ).then((attraction) => {
-      console.log(attraction);
       attraction.rating.quality.rating = newRating(
         attraction.rating.quality.rating,
         attraction.rating.quality.amount,
