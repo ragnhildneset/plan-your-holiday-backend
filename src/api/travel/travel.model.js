@@ -1,5 +1,5 @@
 // Load required packages
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 // Define our Schedule schema
 var TravelSchema   = new mongoose.Schema({
