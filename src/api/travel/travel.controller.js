@@ -10,6 +10,7 @@ export function postTravel(req, res) {
     travel.arrival = req.body.arrival;
     travel.departure = req.body.departure;
     travel.schedule = req.body.schedule;
+    travel.destination = req.body.destination;
 
     travel.isNew = true;
 
@@ -46,7 +47,7 @@ exports.getTravelsbyUsername = function(req, res) {
 };
 
 exports.getLatest = function(req, res) {
-    Travel.findOne({username: req.params.username}).sort({ sort: { 'created_at' : -1 } }).exec(function(err, travels) {
+    Travel.findOne({username: req.params.username}).sort({ '$natural': -1  }).exec(function(err, travels) {
         if (err) {
             res.status(400).send(err);
             return;
