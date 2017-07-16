@@ -5,6 +5,7 @@ const AttractionSchema = new mongoose.Schema({
     type: String,
     require: true
   },
+  url: String,
   city: {
     type: mongoose.Schema.Types.ObjectId
   },
