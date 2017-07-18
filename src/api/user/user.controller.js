@@ -21,7 +21,7 @@ export function setPreferences(req, res, next) {
              res.status(500).send(err);
              return;
          }
-       res.json(docs);
+         res.sendStatus(200);
    });
 }
 
@@ -97,7 +97,7 @@ module.exports.singup = function (req,res) {
     user.username = req.body.username;
     user.email = req.body.email;
     user.loginid = req.body.loginid;
-    user.password = req.body.password;    
+    user.password = req.body.password;
     user.birthday = req.body.birthday;
     user.density = req.body.density;
     user.phonenumber = 0;
